@@ -111,6 +111,13 @@ class Rocket(Object):
         self.angular_velocity = 0
         self.direction = angle # Measured in radians
 
+    def reset_position(self):
+        self.vel = (0,0)
+        self.centerMass = (self.WIN_WIDTH/2,self.WIN_HEIGHT/2)
+        self.direction = math.pi/2
+        self.angular_velocity = 0
+        self.vertex_coordinates = self.determine_coordinates(self.centerMass)
+
     def determine_coordinates(self, center):
         topcoord = (center[0],center[1] - 10)
         leftcoord = (center[0] - 5,center[1] + 5)
