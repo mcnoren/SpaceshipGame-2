@@ -2,6 +2,8 @@ import pygame
 import math
 from Objects import Object, Rocket
 
+#This is a test of Github Desktop
+
 pygame.init()
 
 WIN_HEIGHT = 1000
